@@ -50,14 +50,14 @@ while len(addresses)<5000:
         addresses.append(d)
 print(len(addresses))
 
-# cur.execute("""CREATE TABLE users(user_id SERIAL PRIMARY KEY,login VARCHAR(20) NOT NULL,password VARCHAR(100) NOT NULL,
-# email VARCHAR(100) NOT NULL,
-# phone_number VARCHAR(20) NOT NULL,
-# country VARCHAR(50) NOT NULL,
-# address VARCHAR(50) NOT NULL,
-# profession VARCHAR(50) NOT NULL,
-# followers INT NOT NULL
-# )""")
+cur.execute("""CREATE TABLE users(user_id SERIAL PRIMARY KEY,login VARCHAR(20) NOT NULL,password VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+phone_number VARCHAR(20) NOT NULL,
+country VARCHAR(50) NOT NULL,
+address VARCHAR(50) NOT NULL,
+profession VARCHAR(50) NOT NULL,
+followers INT NOT NULL
+)""")
 
 query='''INSERT INTO users(login,password,email,phone_number,country,address,profession,followers)VALUES'''
 
